@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">401 Character Sheet Builder</string>
+    <string name="dnd_title">Dungeons and Dragons 5th Edition</string>
+    <string name="pathfinder_title">Pathfinder</string>
+    <string name="starfinder_title">Starfinder</string>
+    <string name="header_franchise">Choose Your Franchise!</string>
+    <string name="dnd_Dragonborn">Dragonborn</string>
+    <string name="dnd_Dwarf">Dwarf</string>
+    <string name="dnd_Elf">Elf</string>
+    <string name="dnd_Gnome">Gnome</string>
+    <string name="dnd_Goliath">Goliath</string>
+    <string name="dnd_Halfling">Halfling</string>
+    <string name="dnd_Human">Human</string>
+    <string name="dnd_Tiefling">Tiefling</string>
+    <string name="dnd_raceDesc">Brief Description of the Race</string>
+    <string name="prev_page">Prev Page</string>
+    <string name="next_page">Next Page</string>
+    <string name="what_race">What race are you?</string>
+    <string name="what_name">What is your name?</string>
+    <string name="dnd_Barbarian">Barbarian</string>
+    <string name="dnd_Bard">Bard</string>
+    <string name="dnd_Cleric">Cleric</string>
+    <string name="dnd_Druid">Druid</string>
+    <string name="dnd_Fighter">Fighter</string>
+    <string name="dnd_Monk">Monk</string>
+    <string name="dnd_Paladin">Paladin</string>
+    <string name="dnd_Ranger">Ranger</string>
+    <string name="dnd_Rouge">Rouge</string>
+    <string name="dnd_Sorcerer">Sorcerer</string>
+    <string name="dnd_Warlock">Warlock</string>
+    <string name="dnd_Wizard">Wizard</string>
+    <string name="dndRace" />
+</resources>
