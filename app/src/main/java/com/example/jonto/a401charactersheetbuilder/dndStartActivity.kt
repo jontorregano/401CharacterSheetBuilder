@@ -41,7 +41,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndDragonborn ->
                     if (checked){
                         dndRaceDesc.text = "Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail."
-                        dndAttr.text = "Your Strength score increases by 2, and your Charisma score increases by 1."
+                        dndAttrInt.text = "Your Strength score increases by 2, and your Charisma score increases by 1."
                         dndRace.text = "Dragonborn"
                     }
             }
@@ -49,7 +49,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndDwarf ->
                     if (checked){
                         dndRaceDesc.text = "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal."
-                        dndAttr.text = "Your Constitution score increases by 2."
+                        dndAttrInt.text = "Your Constitution score increases by 2."
                         dndRace.text = "Dwarf"
                     }
             }
@@ -57,7 +57,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndElf ->
                     if (checked){
                         dndRaceDesc.text = "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it."
-                        dndAttr.text = "+2 Dexterity, Darkvision, Keen Senses, Fey Ancestry, Trance"
+                        dndAttrInt.text = "+2 Dexterity, Darkvision, Keen Senses, Fey Ancestry, Trance"
                         dndRace.text = "Elf"
                     }
             }
@@ -65,7 +65,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndGoliath ->
                     if (checked){
                         dndRaceDesc.text = "Strong and reclusive, every day brings a new challenge to a goliath."
-                        dndAttr.text = "+2 Strength, +1 Constitution, Natural Athlete, Stone's Endurance, Powerful Build, Mountain Born"
+                        dndAttrInt.text = "+2 Strength, +1 Constitution, Natural Athlete, Stone's Endurance, Powerful Build, Mountain Born"
                         dndRace.text = "Goliath"
                     }
             }
@@ -73,7 +73,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndTiefling ->
                     if (checked){
                         dndRaceDesc.text = "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling."
-                        dndAttr.text = "Your Intelligence score increases by 1, and your Charisma score increases by 2."
+                        dndAttrInt.text = "Your Intelligence score increases by 1, and your Charisma score increases by 2."
                         dndRace.text = "Tiefling"
                     }
             }
@@ -81,7 +81,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndHuman ->
                     if (checked){
                         dndRaceDesc.text = "Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds."
-                        dndAttr.text = "+1 to All Ability Scores, Extra Language"
+                        dndAttrInt.text = "+1 to All Ability Scores, Extra Language"
                         dndRace.text = "Human"
                     }
             }
@@ -89,7 +89,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndHalfling ->
                     if (checked){
                         dndRaceDesc.text = "The diminutive halflings survive in a world full of larger creatures by avoiding notice or, barring that, avoiding offense."
-                        dndAttr.text = "+2 Dexterity, Lucky, Brave, Halfling Nimbleness"
+                        dndAttrInt.text = "+2 Dexterity, Lucky, Brave, Halfling Nimbleness"
                         dndRace.text = "Halfling"
                     }
             }
@@ -97,7 +97,7 @@ class dndStartActivity : AppCompatActivity() {
                 R.id.dndGnome ->
                     if (checked){
                         dndRaceDesc.text = "A gnome’s energy and enthusiasm for living shines through every inch of his or her tiny body."
-                        dndAttr.text = "+2 Intelligence, Darkvision, Gnome Cunning"
+                        dndAttrInt.text = "+2 Intelligence, Darkvision, Gnome Cunning"
                         dndRace.text = "Gnome"
                     }
             }

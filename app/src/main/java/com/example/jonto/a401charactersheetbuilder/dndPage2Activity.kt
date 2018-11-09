@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.RadioButton
 import kotlinx.android.synthetic.main.activity_dnd_page2.*
 import kotlinx.android.synthetic.main.activity_dnd_start.*
+import kotlinx.android.synthetic.main.activity_home.view.*
 
 class dndPage2Activity : AppCompatActivity() {
 
@@ -18,13 +19,23 @@ class dndPage2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_page2)
-
-        //val name = intent.getStringExtra(CURRENT_NAME)
-        //val race = intent.getStringExtra(CURRENT_RACE)
     }
 
-    fun dndPageTwo (view: View){
-        val dndIntent = Intent(this, dndPage2Activity::class.java)
+    fun dndPageThree (view: View){
+        val dndIntent = Intent(this, dndPage3Activity::class.java)
+
+        val name = intent.getStringExtra(CURRENT_NAME)
+        val race = intent.getStringExtra(CURRENT_RACE)
+
+        val currentName = name
+        dndIntent.putExtra(dndPage3Activity.CURRENT_NAME, currentName)
+
+        val currentRace = race
+        dndIntent.putExtra(dndPage3Activity.CURRENT_RACE, currentRace)
+
+        val currentClass = dndClass.text.toString()
+        dndIntent.putExtra(dndPage3Activity.CURRENT_CLASS, currentClass)
+
         startActivity(dndIntent)
     }
 
