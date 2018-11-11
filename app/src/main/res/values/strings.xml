@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">401 Character Sheet Builder</string>
+    <string name="app_name">DnD Character Builder 401</string>
     <string name="dnd_title">Dungeons and Dragons 5th Edition</string>
     <string name="pathfinder_title">Pathfinder</string>
     <string name="starfinder_title">Starfinder</string>
-    <string name="header_franchise">Choose Your Franchise!</string>
+    <string name="header_franchise">Lets Get Started!</string>
     <string name="dnd_Dragonborn">Dragonborn</string>
     <string name="dnd_Dwarf">Dwarf</string>
     <string name="dnd_Elf">Elf</string>

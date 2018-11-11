@@ -30,11 +30,11 @@ class dndPage3Activity : AppCompatActivity() {
     }
 
     fun dndPageExport (view: View){
-        val dndIntent = Intent(this, dndPdfViewerActivity::class.java)
+        val dndIntent = Intent(this, dndPlayActivity::class.java)
 
-        val name = intent.getStringExtra(dndPage3Activity.CURRENT_NAME)
-        val race = intent.getStringExtra(dndPage3Activity.CURRENT_RACE)
-        val clas = intent.getStringExtra(dndPage3Activity.CURRENT_CLASS)
+        val name = intent.getStringExtra(dndPlayActivity.CURRENT_NAME)
+        val race = intent.getStringExtra(dndPlayActivity.CURRENT_RACE)
+        val clas = intent.getStringExtra(dndPlayActivity.CURRENT_CLASS)
 
         val currentName = name
         dndIntent.putExtra(dndPage3Activity.CURRENT_NAME, currentName)
@@ -45,6 +45,24 @@ class dndPage3Activity : AppCompatActivity() {
         val currentClass = clas
         dndIntent.putExtra(dndPage3Activity.CURRENT_CLASS, currentClass)
 
+        val currentStr = dndStr.text.toString()
+        dndIntent.putExtra(dndPage3Activity.CURRENT_STR, currentStr)
+
+        val currentDex = dndDex.text.toString()
+        dndIntent.putExtra(dndPage3Activity.CURRENT_DEX, currentDex)
+
+        val currentCon = dndCon.text.toString()
+        dndIntent.putExtra(dndPage3Activity.CURRENT_CON, currentCon)
+
+        val currentInt = dndInt.text.toString()
+        dndIntent.putExtra(dndPage3Activity.CURRENT_INT, currentInt)
+
+        val currentWis = dndWis.text.toString()
+        dndIntent.putExtra(dndPage3Activity.CURRENT_WIS, currentWis)
+
+        val currentCha = dndCha.text.toString()
+        dndIntent.putExtra(dndPage3Activity.CURRENT_CHA, currentCha)
+
         startActivity(dndIntent)
     }
 
@@ -53,27 +71,31 @@ class dndPage3Activity : AppCompatActivity() {
         startActivity(dndIntent)
     }
 
-    fun dndRandStr(view:View){
+    fun dndRandStr(view: View){
         var race = intent.getStringExtra(CURRENT_RACE)
 
         val random = Random()
         var randomInt = 0
 
         randomInt = random.nextInt(16)
-        val statFinal = randomInt + 3
+        var statFinal = randomInt + 3
 
         if(race == "Dragonborn"){
             val statFinal = statFinal + 2
             dndStrResult.text = "Strength and Dragonborn Bonus + 2: " + Integer.toString(statFinal)
+            dndStr.text = Integer.toString(statFinal)
         } else if(race == "Goliath"){
             val statFinal = statFinal + 2
             dndStrResult.text = "Strength and Goliath Bonus + 2: " + Integer.toString(statFinal)
+            dndStr.text = Integer.toString(statFinal)
         } else if (race == "Human") {
             val statFinal = statFinal + 1
             dndStrResult.text = "Strength and Human Bonus + 1: " + Integer.toString(statFinal)
+            dndStr.text = Integer.toString(statFinal)
         }
         else {
             dndStrResult.text = "Strength: " + Integer.toString(statFinal)
+            dndStr.text = Integer.toString(statFinal)
         }
     }
 
@@ -89,15 +111,19 @@ class dndPage3Activity : AppCompatActivity() {
         if (race == "Elf") {
             val statFinal = statFinal + 2
             dndDexResult.text = "Dexterity and Elf Bonus + 2: " + Integer.toString(statFinal)
+            dndDex.text = Integer.toString(statFinal)
         } else if (race == "Halfling") {
             val statFinal = statFinal + 2
             dndDexResult.text = "Dexterity and Halfling Bonus + 2: " + Integer.toString(statFinal)
+            dndDex.text = Integer.toString(statFinal)
         } else if (race == "Human") {
             val statFinal = statFinal + 1
             dndDexResult.text = "Dexterity and Human Bonus + 1: " + Integer.toString(statFinal)
+            dndDex.text = Integer.toString(statFinal)
         }
         else {
             dndDexResult.text = "Dexterity: " + Integer.toString(statFinal)
+            dndDex.text = Integer.toString(statFinal)
         }
     }
 
@@ -113,15 +139,19 @@ class dndPage3Activity : AppCompatActivity() {
         if (race == "Dwarf") {
             val statFinal = statFinal + 2
             dndResultCon.text = "Constitution and Dwarf Bonus + 2: " + Integer.toString(statFinal)
+            dndCon.text = Integer.toString(statFinal)
         } else if (race == "Goliath") {
             val statFinal = statFinal + 1
             dndResultCon.text = "Constitution and Goliath Bonus + 1: " + Integer.toString(statFinal)
+            dndCon.text = Integer.toString(statFinal)
         } else if (race == "Human") {
             val statFinal = statFinal + 1
             dndResultCon.text = "Constitution and Human Bonus + 1: " + Integer.toString(statFinal)
+            dndCon.text = Integer.toString(statFinal)
         }
         else {
             dndResultCon.text = "Constitution: " + Integer.toString(statFinal)
+            dndCon.text = Integer.toString(statFinal)
         }
     }
 
@@ -137,16 +167,20 @@ class dndPage3Activity : AppCompatActivity() {
         if (race == "Gnome") {
             val statFinal = statFinal + 2
             dndResultInt.text = "Intelligence and Gnome Bonus + 2: " + Integer.toString(statFinal)
+            dndInt.text = Integer.toString(statFinal)
         } else if (race == "Tiefling"){
             val statFinal = statFinal + 1
             dndResultInt.text = "Intelligence and Tiefling Bonus + 1: " + Integer.toString(statFinal)
+            dndInt.text = Integer.toString(statFinal)
         }
         else if (race == "Human"){
             val statFinal = statFinal + 1
             dndResultInt.text = "Intelligence and Human Bonus + 1: " + Integer.toString(statFinal)
+            dndInt.text = Integer.toString(statFinal)
         }
         else {
             dndResultInt.text = "Intelligence: " + Integer.toString(statFinal)
+            dndInt.text = Integer.toString(statFinal)
         }
     }
 
@@ -162,8 +196,10 @@ class dndPage3Activity : AppCompatActivity() {
         if (race == "Human"){
             val statFinal = statFinal + 1
             dndResultWis.text = "Wisdom and Human Bonus + 1: " + Integer.toString(statFinal)
+            dndWis.text = Integer.toString(statFinal)
         } else {
             dndResultWis.text = "Wisdom: " + Integer.toString(statFinal)
+            dndWis.text = Integer.toString(statFinal)
         }
     }
 
@@ -179,15 +215,19 @@ class dndPage3Activity : AppCompatActivity() {
         if(race == "Dragonborn"){
             val statFinal = statFinal + 1
             dndResultCha.text = "Charisma and Dragonborn Bonus + 1: " + Integer.toString(statFinal)
+            dndCha.text = Integer.toString(statFinal)
         } else if (race == "Tiefling"){
             val statFinal = statFinal + 2
             dndResultCha.text = "Charisma and Tiefling Bonus + 2: " + Integer.toString(statFinal)
+            dndCha.text = Integer.toString(statFinal)
         }  else if (race == "Human"){
             val statFinal = statFinal + 1
             dndResultCha.text = "Charisma and Human Bonus + 1: " + Integer.toString(statFinal)
+            dndCha.text = Integer.toString(statFinal)
         }
         else {
             dndResultCha.text = "Charisma: " + Integer.toString(statFinal)
+            dndCha.text = Integer.toString(statFinal)
         }
     }
 }
