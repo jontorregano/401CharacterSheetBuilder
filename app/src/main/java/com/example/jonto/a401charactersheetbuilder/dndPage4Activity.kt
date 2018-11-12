@@ -28,7 +28,7 @@ class dndPage4Activity : AppCompatActivity() {
     }
 
     fun dndPageNext(view: View) {
-        val dndIntent = Intent(this, dndPlayActivity::class.java)
+        val dndIntent = Intent(this, dndPage5Activity::class.java)
 
         val name = intent.getStringExtra(dndPage3Activity.CURRENT_NAME)
         val race = intent.getStringExtra(dndPlayActivity.CURRENT_RACE)
@@ -76,60 +76,91 @@ class dndPage4Activity : AppCompatActivity() {
 
     fun alignmentCheck(view: View) {
         if (view is RadioButton) {
+
             val checked = view.isChecked
 
             when (view.getId()) {
                 R.id.dndLG ->
                     if (checked) {
-                        dndAlignment.text = "Lawful Good"
+                        dndAlignmentDesc.text = "Creatures can be counted on to do " +
+                                "the right thing as expected by society. \n\nGold dragons, " +
+                                "paladins, and most dwarves are lawful good."
+                        dndAlignment.text = "Lawful Good (LG)"
                     }
             }
             when (view.getId()) {
                 R.id.dndNG ->
                     if (checked) {
-                        dndAlignment.text = "Neutral Good"
+                        dndAlignmentDesc.text = "Folk do the best they can to help" +
+                                "others according to their needs. \n\nMany celestials, some " +
+                                "cloud giants, and most gnomes are neutral good."
+                        dndAlignment.text = "Neutral Good (NG)"
                     }
             }
             when (view.getId()) {
                 R.id.dndCG ->
                     if (checked) {
-                        dndAlignment.text = "Chaotic Good"
+                        dndAlignmentDesc.text = "Creatures act as their conscience" +
+                                "directs, with little regard for what others expect. \n\nCopper " +
+                                "dragons, many elves, and unicorns are chaotic good."
+                        dndAlignment.text = "Chaotic Good (CG)"
                     }
             }
             when (view.getId()) {
                 R.id.dndLN ->
                     if (checked) {
-                        dndAlignment.text = "Lawful Neutral"
+                        dndAlignmentDesc.text = "Individuals act in accordance" +
+                                "with law, tradition, or personal codes. \n\nMany monks and " +
+                                "some wizards are lawful neutral."
+                        dndAlignment.text = "Lawful Neutral (LN)"
                     }
             }
             when (view.getId()) {
                 R.id.dndTN ->
                     if (checked) {
-                        dndAlignment.text = "True Neutral"
+                        dndAlignmentDesc.text = "The alignment of those who prefer to " +
+                                "steer clear of moral questions and don't take sides, " +
+                                "doing what seems best at the time. \n\nLizard-folk, most " +
+                                "druids, and many humans are neutral."
+                        dndAlignment.text = "True Neutral (N)"
                     }
             }
             when (view.getId()) {
                 R.id.dndCN ->
                     if (checked) {
-                        dndAlignment.text = "Chaotic Neutral"
+                        dndAlignmentDesc.text = "Creatures follow their whims, " +
+                                "holding their personal freedom above all else.\n\n" +
+                                "Many barbarians and rogues, and some bards, are " +
+                                "chaotic neutral."
+                        dndAlignment.text = "Chaotic Neutral (CN)"
                     }
             }
             when (view.getId()) {
                 R.id.dndLE ->
                     if (checked) {
-                        dndAlignment.text = "Lawful Evil"
+                        dndAlignmentDesc.text = "Creatures methodically take what they " +
+                                "want, within the limits of a code of tradition, loyalty, or " +
+                                "order. \n\nDevils, blue dragons, and hobgoblins are lawful evil."
+                        dndAlignment.text = "Lawful Evil (LE)"
                     }
             }
             when (view.getId()) {
                 R.id.dndNE ->
                     if (checked) {
-                        dndAlignment.text = "Neutral Evil"
+                        dndAlignmentDesc.text = "The alignment of those who do " +
+                                "whatever they can get away with, without compassion or " +
+                                "qualms. \n\nMany drow, some cloud giants, and yugoloths " +
+                                "are neutral evil."
+                        dndAlignment.text = "Neutral Evil (NE)"
                     }
             }
             when (view.getId()) {
-                R.id.dndCN ->
+                R.id.dndCE ->
                     if (checked) {
-                        dndAlignment.text = "Chaotic Evil"
+                        dndAlignmentDesc.text = "Creatures act with arbitrary " +
+                                "violence, spurred by their greed, hatred, or bloodlust.\n\n" +
+                                "Demons, red dragons, and orcs are chaotic evil."
+                        dndAlignment.text = "Chaotic Evil (CE)"
                     }
             }
         }

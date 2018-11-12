@@ -19,6 +19,7 @@ class dndPlayActivity : AppCompatActivity() {
         const val CURRENT_WIS = "currentWis"
         const val CURRENT_CHA = "currentCha"
         const val CURRENT_ALIGNMENT = "currentAlignment"
+        const val CURRENT_BACKSTORY = "currentBackstory"
     }
 
     fun dndBeginning (view: View){
@@ -40,6 +41,7 @@ class dndPlayActivity : AppCompatActivity() {
         var wis = intent.getStringExtra(dndPlayActivity.CURRENT_WIS)
         var cha = intent.getStringExtra(dndPlayActivity.CURRENT_CHA)
         var alignment = intent.getStringExtra(dndPlayActivity.CURRENT_ALIGNMENT)
+        var backstory = intent.getStringExtra(dndPlayActivity.CURRENT_BACKSTORY)
 
 
         dndPlayHeader.text = name + "'s Sheet"
@@ -52,6 +54,7 @@ class dndPlayActivity : AppCompatActivity() {
         dndWisScore.text = wis
         dndChaScore.text = cha
         dndAlignment.text = alignment
+        dndBackstory.text = backstory
 
         if (clas == "Barbarian"){
             val dndHP = 12
