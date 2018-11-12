@@ -23,6 +23,7 @@ class dndPlayActivity : AppCompatActivity() {
         const val CURRENT_INT = "currentInt"
         const val CURRENT_WIS = "currentWis"
         const val CURRENT_CHA = "currentCha"
+        const val CURRENT_ALIGNMENT = "currentAlignment"
     }
 
     fun dndBeginning (view: View){
