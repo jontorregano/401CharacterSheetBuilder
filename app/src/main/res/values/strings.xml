@@ -29,6 +29,15 @@
     <string name="dnd_Sorcerer">Sorcerer</string>
     <string name="dnd_Warlock">Warlock</string>
     <string name="dnd_Wizard">Wizard</string>
+    <string name="dnd_LG">Lawful Good</string>
+    <string name="dnd_NG">Neutral Good</string>
+    <string name="dnd_CG">Chaotic Good</string>
+    <string name="dnd_LN">Lawful Neutral</string>
+    <string name="dnd_TN">True Neutral</string>
+    <string name="dnd_CN">Chaotic Neutral</string>
+    <string name="dnd_LE">Lawful Evil</string>
+    <string name="dnd_NE">Neutral Evil</string>
+    <string name="dnd_CE">Chaotic Evil</string>
     <string name="dndRace"/>
     <string name="ability_header">Roll for Your Abilities!</string>
 </resources>
