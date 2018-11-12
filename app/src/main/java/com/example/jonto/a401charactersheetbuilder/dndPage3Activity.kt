@@ -31,7 +31,7 @@ class dndPage3Activity : AppCompatActivity() {
     }
 
     fun dndPageExport (view: View){
-        val dndIntent = Intent(this, dndPlayActivity::class.java)
+        val dndIntent = Intent(this, dndPage4Activity::class.java)
 
         val name = intent.getStringExtra(dndPlayActivity.CURRENT_NAME)
         val race = intent.getStringExtra(dndPlayActivity.CURRENT_RACE)
