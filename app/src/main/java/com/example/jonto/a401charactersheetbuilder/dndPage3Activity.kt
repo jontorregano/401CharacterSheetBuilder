@@ -15,7 +15,6 @@ class dndPage3Activity : AppCompatActivity() {
         const val CURRENT_RACE = "currentRace"
         const val CURRENT_NAME = "currentName"
         const val CURRENT_CLASS = "currentClass"
-        const val CURRENT_ALIGNMENT = "currentClass"
         const val CURRENT_STR = "currentStr"
         const val CURRENT_DEX = "currentDex"
         const val CURRENT_CON = "currentCon"
@@ -27,16 +26,14 @@ class dndPage3Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_page3)
-
     }
 
     fun dndPageExport (view: View){
         val dndIntent = Intent(this, dndPage4Activity::class.java)
 
-        val name = intent.getStringExtra(dndPlayActivity.CURRENT_NAME)
-        val race = intent.getStringExtra(dndPlayActivity.CURRENT_RACE)
-        val clas = intent.getStringExtra(dndPlayActivity.CURRENT_CLASS)
-        val alignment = intent.getStringExtra(dndPlayActivity.CURRENT_ALIGNMENT)
+        val name = intent.getStringExtra(dndPage3Activity.CURRENT_NAME)
+        val race = intent.getStringExtra(dndPage3Activity.CURRENT_RACE)
+        val clas = intent.getStringExtra(dndPage3Activity.CURRENT_CLASS)
 
         val currentName = name
         dndIntent.putExtra(dndPage3Activity.CURRENT_NAME, currentName)
@@ -46,9 +43,6 @@ class dndPage3Activity : AppCompatActivity() {
 
         val currentClass = clas
         dndIntent.putExtra(dndPage3Activity.CURRENT_CLASS, currentClass)
-
-        val currentAlignment = alignment
-        dndIntent.putExtra(dndPage3Activity.CURRENT_ALIGNMENT, currentAlignment)
 
         val currentStr = dndStr.text.toString()
         dndIntent.putExtra(dndPage3Activity.CURRENT_STR, currentStr)
@@ -71,10 +65,6 @@ class dndPage3Activity : AppCompatActivity() {
         startActivity(dndIntent)
     }
 
-    fun dndPrev (view: View){
-        val dndIntent = Intent(this, dndStartActivity::class.java)
-        startActivity(dndIntent)
-    }
 
     fun dndRandStr(view: View){
         var race = intent.getStringExtra(CURRENT_RACE)

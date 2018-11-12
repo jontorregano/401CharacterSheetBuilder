@@ -16,7 +16,7 @@
                 android:layout_height="48dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/next_page"
-                android:onClick="dndPageThree"
+                android:onClick="dndPageNext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="1.0"

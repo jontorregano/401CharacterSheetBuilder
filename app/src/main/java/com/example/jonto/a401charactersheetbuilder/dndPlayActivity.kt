@@ -1,15 +1,10 @@
 package com.example.jonto.a401charactersheetbuilder
 
-import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Environment
 import android.view.View
-import kotlinx.android.synthetic.main.activity_dnd_page3.*
 import kotlinx.android.synthetic.main.activity_dnd_play.*
-import java.io.File
-import java.io.FileOutputStream
 
 class dndPlayActivity : AppCompatActivity() {
 
@@ -31,30 +26,32 @@ class dndPlayActivity : AppCompatActivity() {
         startActivity(dndIntent)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dnd_play)
 
-
-        var race = intent.getStringExtra(dndPage3Activity.CURRENT_RACE)
-        var name = intent.getStringExtra(dndPage3Activity.CURRENT_NAME)
-        var clas = intent.getStringExtra(dndPage3Activity.CURRENT_CLASS)
+        var race = intent.getStringExtra(dndPlayActivity.CURRENT_RACE)
+        var name = intent.getStringExtra(dndPlayActivity.CURRENT_NAME)
+        var clas = intent.getStringExtra(dndPlayActivity.CURRENT_CLASS)
         var str = intent.getStringExtra(dndPlayActivity.CURRENT_STR)
         var dex = intent.getStringExtra(dndPlayActivity.CURRENT_DEX)
         var con = intent.getStringExtra(dndPlayActivity.CURRENT_CON)
         var int = intent.getStringExtra(dndPlayActivity.CURRENT_INT)
         var wis = intent.getStringExtra(dndPlayActivity.CURRENT_WIS)
         var cha = intent.getStringExtra(dndPlayActivity.CURRENT_CHA)
+        var alignment = intent.getStringExtra(dndPlayActivity.CURRENT_ALIGNMENT)
 
 
         dndPlayHeader.text = name + "'s Sheet"
+        dndRace.text = race
+        dndClass.text = clas
         dndStrScore.text = str
         dndDexScore.text = dex
         dndConScore.text = con
         dndIntScore.text = int
         dndWisScore.text = wis
         dndChaScore.text = cha
+        dndAlignment.text = alignment
 
         if (clas == "Barbarian"){
             val dndHP = 12
