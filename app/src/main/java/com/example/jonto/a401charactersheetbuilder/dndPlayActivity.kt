@@ -1,10 +1,18 @@
 package com.example.jonto.a401charactersheetbuilder
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.content.Context
 import kotlinx.android.synthetic.main.activity_dnd_play.*
+import java.io.File
+import java.io.FileOutputStream
+import java.security.AccessController.getContext
+import android.util.Log
 
 class dndPlayActivity : AppCompatActivity() {
 
@@ -473,32 +481,31 @@ class dndPlayActivity : AppCompatActivity() {
     }
 
     fun writeToFile(view: View){
-        var race = intent.getStringExtra(dndPage3Activity.CURRENT_RACE)
-        var name = intent.getStringExtra(dndPage3Activity.CURRENT_NAME)
-        var clas = intent.getStringExtra(dndPage3Activity.CURRENT_CLASS)
+        val path = getExternalFilesDir(null)
+        Log.d("TAG", path.toString())
+        val text: String = getText(view)
 
-        //val filename = "charactersheet.txt"
+        val letDirectory = File(path, "LET")
+        letDirectory.mkdirs()
 
-        //val file = File(Environment.getExternalStoragePublicDirectory(String()).absolutePath, filename)
+        val file = File(letDirectory, "character_sheet.txt")
 
-        //val content = "test"
-
-        //FileOutputStream(file).write(content.toByteArray())
-
-
-
-        //file.appendText("Name:" + name + "\n")
-        //file.appendText("Race:" + race + "\n")
-        //file.appendText("Class:" + clas + "\n")
-        //file.appendText("Health:" + dndHealth.text + "\n")
-        //file.appendText("Armor:" + dndArmor.text + "\n")
-        //file.appendText("Strength:" + dndStrScore.text + " Modifier:" + dndStrMod.text + "\n")
-        //file.appendText("Dexterity:" + dndDexScore.text + " Modifier:" + dndDexMod.text + "\n")
-        //file.appendText("Constitution:" + dndConScore.text + " Modifier:" + dndConMod.text + "\n")
-        //file.appendText("Intelligence:" + dndIntScore.text + " Modifier:" + dndIntMod.text + "\n")
-        //file.appendText("Wisdom:" + dndWisScore.text + " Modifier:" + dndWisMod.text + "\n")
-        //file.appendText("Charisma:" + dndChaScore.text + " Modifier:" + dndChaMod.text + "\n")
+        file.appendText(text)
     }
 
+    fun getText(view: View): String{
+        return "NAME: \n" + CURRENT_NAME +
+                "CLASS: \n" + CURRENT_CLASS +
+                "RACE: \n" +  CURRENT_RACE +
+                "ALIGNMENT: \n" + CURRENT_ALIGNMENT +
+                "BACKSTORY: \n" + CURRENT_BACKSTORY +
+                "STATS: \n" +
+                "STR: \n" + CURRENT_STR +
+                "DEX: \n" + CURRENT_DEX +
+                "CON: \n" + CURRENT_CON +
+                "INT: \n" + CURRENT_INT +
+                "WIS: \n" + CURRENT_WIS +
+                "CHA: \n" +  CURRENT_CHA
 
+    }
 }

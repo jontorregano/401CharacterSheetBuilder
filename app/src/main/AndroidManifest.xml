@@ -3,6 +3,7 @@
           package="com.example.jonto.a401charactersheetbuilder">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
             android:allowBackup="true"
@@ -26,6 +27,8 @@
         <activity android:name=".dndPlayActivity">
         </activity>
         <activity android:name=".dndPage4Activity">
+        </activity>
+        <activity android:name=".dndPage5Activity">
         </activity>
     </application>
 
