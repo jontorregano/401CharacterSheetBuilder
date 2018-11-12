@@ -1,200 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorBackground"
-    tools:context=".dndPage3Activity">
-
-    <TextView
-            android:text="@string/ability_header"
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        tools:context=".dndPage3Activity">
+    <android.support.constraint.ConstraintLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/charAbility" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent" android:textSize="45sp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/tableLayout" android:textAlignment="center"
-            app:layout_constraintVertical_bias="0.126"/>
-    <Button
-            android:text="@string/next_page"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnNext" android:layout_marginBottom="8dp"
-            android:onClick="dndPageExport"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent" android:textSize="25sp"/>
-    <TableLayout
-            android:layout_width="395dp"
-            android:layout_height="567dp"
-            android:id="@+id/tableLayout"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.0" tools:layout_editor_absoluteY="67dp">
+            android:layout_height="wrap_content" android:minHeight="1000dp">
+        <TextView
+                android:text="@string/ability_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/charAbility" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="parent" android:textSize="45sp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/tableLayout" android:textAlignment="center"
+                app:layout_constraintVertical_bias="0.126"/>
+        <Button
+                android:text="@string/next_page"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNext" android:layout_marginBottom="8dp"
+                android:onClick="dndPageExport"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent" android:textSize="25sp"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/dndResultCha"
+                app:layout_constraintHorizontal_bias="1.0" app:layout_constraintVertical_bias="0.161"/>
+        <TableLayout
+                android:layout_width="395dp"
+                android:layout_height="567dp"
+                android:id="@+id/tableLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="1.0" tools:layout_editor_absoluteY="0dp">
 
-    </TableLayout>
-    <Button
-            android:text="Roll for Strength"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnStrRoll" android:layout_marginTop="8dp"
-            android:onClick="dndRandStr"
-            app:layout_constraintTop_toBottomOf="@+id/charAbility" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="0.0" android:textSize="25sp"/>
+        </TableLayout>
+        <Button
+                android:text="Roll for Strength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnStrRoll" android:layout_marginTop="8dp"
+                android:onClick="dndRandStr"
+                app:layout_constraintTop_toBottomOf="@+id/charAbility" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="0.0" android:textSize="25sp"/>
+        <TextView
+                android:id="@+id/dndStrResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Strength:"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnStrRoll"/>
+        <Button
+                android:text="Roll for Dexterity"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:id="@+id/btnDexRoll" android:layout_marginTop="10dp"
+                android:onClick="dndRandDex"
+                app:layout_constraintTop_toBottomOf="@+id/dndStrResult" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintHorizontal_bias="1.0" android:textSize="25sp"/>
+        <TextView
+                android:id="@+id/dndDexResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Dexterity:"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDexRoll"/>
+        <Button
+                android:text="Roll for Constitution"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:id="@+id/btnRollCon" android:layout_marginTop="10dp"
+                android:onClick="dndRandCon"
+                app:layout_constraintTop_toBottomOf="@+id/dndDexResult" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp" android:textSize="25sp"/>
+        <Button
+                android:text="Roll for Intelligence"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:id="@+id/btnRollInt" app:layout_constraintStart_toStartOf="parent"
+                android:onClick="dndRandInt"
+                android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/dndResultCon"
+                android:textSize="25sp"/>
+        <Button
+                android:text="Roll for Wisdom"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:id="@+id/btnRollWisdom" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:onClick="dndRandWis"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/dndResultInt"
+                android:textSize="25sp"/>
+        <Button
+                android:text="Roll for Charisma"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRollCharisma" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:onClick="dndRandCha"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="0.497" android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/dndResultWis" android:textSize="25sp"/>
+        <TextView
+                android:id="@+id/dndResultCon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Constitution: "
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRollCon"/>
+        <TextView
+                android:id="@+id/dndResultInt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Intelligence: "
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRollInt"/>
+        <TextView
+                android:id="@+id/dndResultWis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Wisdom: "
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRollWisdom"/>
+        <TextView
+                android:id="@+id/dndResultCha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Charisma: "
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnRollCharisma"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/dndDex" android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="8dp" android:id="@+id/dndStr" android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="646dp"
+                tools:layout_editor_absoluteX="173dp" android:id="@+id/dndCon" android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/dndInt" android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="659dp"
+                tools:layout_editor_absoluteX="176dp" android:id="@+id/dndWis" android:visibility="gone"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:layout_editor_absoluteY="659dp"
+                tools:layout_editor_absoluteX="189dp" android:id="@+id/dndCha" android:visibility="gone"/>
+    </android.support.constraint.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/dndStrResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Strength:"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStrRoll" />
-    <Button
-            android:text="Roll for Dexterity"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:id="@+id/btnDexRoll" android:layout_marginTop="10dp"
-            android:onClick="dndRandDex"
-            app:layout_constraintTop_toBottomOf="@+id/dndStrResult" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            app:layout_constraintHorizontal_bias="1.0" android:textSize="25sp"/>
-
-    <TextView
-        android:id="@+id/dndDexResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Dexterity:"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnDexRoll" />
-    <Button
-            android:text="Roll for Constitution"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:id="@+id/btnRollCon" android:layout_marginTop="10dp"
-            android:onClick="dndRandCon"
-            app:layout_constraintTop_toBottomOf="@+id/dndDexResult" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:textSize="25sp"/>
-    <Button
-            android:text="Roll for Intelligence"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:id="@+id/btnRollInt" app:layout_constraintStart_toStartOf="parent"
-            android:onClick="dndRandInt"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/dndResultCon"
-            android:textSize="25sp"/>
-    <Button
-            android:text="Roll for Wisdom"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:id="@+id/btnRollWisdom" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:onClick="dndRandWis"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginTop="10dp" app:layout_constraintTop_toBottomOf="@+id/dndResultInt"
-            android:textSize="25sp"/>
-    <Button
-            android:text="Roll for Charisma"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnRollCharisma" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:onClick="dndRandCha"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintHorizontal_bias="0.497" android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/dndResultWis" android:textSize="25sp"/>
-
-    <TextView
-        android:id="@+id/dndResultCon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Constitution: "
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRollCon" />
-
-    <TextView
-        android:id="@+id/dndResultInt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Intelligence: "
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRollInt" />
-
-    <TextView
-        android:id="@+id/dndResultWis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Wisdom: "
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRollWisdom" />
-
-    <TextView
-        android:id="@+id/dndResultCha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Charisma: "
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRollCharisma" />
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/dndDex" android:visibility="gone"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="0dp"
-            tools:layout_editor_absoluteX="8dp" android:id="@+id/dndStr" android:visibility="gone"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="646dp"
-            tools:layout_editor_absoluteX="173dp" android:id="@+id/dndCon" android:visibility="gone"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/dndInt" android:visibility="gone"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="659dp"
-            tools:layout_editor_absoluteX="176dp" android:id="@+id/dndWis" android:visibility="gone"/>
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" tools:layout_editor_absoluteY="659dp"
-            tools:layout_editor_absoluteX="189dp" android:id="@+id/dndCha" android:visibility="gone"/>
-</android.support.constraint.ConstraintLayout>
+</ScrollView>

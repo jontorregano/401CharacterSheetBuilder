@@ -6,25 +6,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
-        tools:context=".dndPage2Activity">
+        tools:context=".dndPage4Activity">
     <android.support.constraint.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:minHeight="900dp">
         <Button
-                android:id="@+id/btnNext2"
+                android:id="@+id/btnNextAlignmentPage"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="8dp"
                 android:text="@string/next_page"
-                android:onClick="dndPageFour"
+                android:onClick="dndPageThree"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dndClassAttr" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="1.0"
-                android:layout_marginTop="36dp"/>
+                android:layout_marginTop="40dp" app:layout_constraintTop_toBottomOf="@+id/dndAlignmentDesc"/>
         <TextView
                 android:text="What is your class?"
                 android:layout_width="wrap_content"
-                android:layout_height="122dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/charClass" android:textSize="45sp"
                 android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
                 android:layout_marginStart="8dp"
@@ -36,155 +36,112 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@+id/charClass" app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="8dp"
-                android:id="@+id/radioGroup2">
+                android:id="@+id/radioGroupAlignment">
 
             <RadioButton
-                    android:id="@+id/dndBarbarian"
+                    android:id="@+id/dndLG"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Barbarian"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_LG"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndBard"
+                    android:id="@+id/dndNG"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Bard"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_NG"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndCleric"
+                    android:id="@+id/dndCG"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Cleric"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_CG"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndDruid"
+                    android:id="@+id/dndLN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Druid"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_LN"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndFighter"
+                    android:id="@+id/dndTN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Fighter"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_TN"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndMonk"
+                    android:id="@+id/dndCN"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Monk"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_CN"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndPaladin"
+                    android:id="@+id/dndLE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Paladin"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_LE"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndRanger"
+                    android:id="@+id/dndNE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Ranger"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_NE"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
 
             <RadioButton
-                    android:id="@+id/dndRouge"
+                    android:id="@+id/dndCE"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Rouge"
-                    android:textAlignment="textStart"
-                    android:textSize="30sp"/>
-
-            <RadioButton
-                    android:id="@+id/dndSorcerer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Sorcerer"
-                    android:textAlignment="textStart"
-                    android:textSize="30sp"/>
-
-            <RadioButton
-                    android:id="@+id/dndWarlock"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Warlock"
-                    android:textAlignment="textStart"
-                    android:textSize="30sp"/>
-
-            <RadioButton
-                    android:id="@+id/dndWizard"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="classCheck"
-                    android:text="@string/dnd_Wizard"
+                    android:onClick="alignmentCheck"
+                    android:text="@string/dnd_CE"
                     android:textAlignment="textStart"
                     android:textSize="30sp"/>
         </RadioGroup>
         <TextView
-                android:id="@+id/dndClassDesc"
+                android:id="@+id/dndAlignmentDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="8dp"
-                android:text="Class Description"
                 android:textAlignment="center"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.502" android:layout_marginTop="52dp"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup2"/>
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupAlignment"/>
         <TextView
-                android:id="@+id/dndClassAttr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Class Attributes"
-                android:textAlignment="center"
-                android:textSize="25sp"
-                app:layout_constraintTop_toBottomOf="@+id/dndClassDesc"
-                android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginStart="8dp"
-                app:layout_constraintStart_toStartOf="parent"/>
-        <TextView
-                android:id="@+id/dndClass"
+                android:id="@+id/dndAlignment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -193,7 +150,6 @@
                 android:textAlignment="center"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btnNext2"
-                app:layout_constraintTop_toBottomOf="@+id/dndClassAttr"/>
+                app:layout_constraintEnd_toStartOf="@+id/btnNext2"/>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
